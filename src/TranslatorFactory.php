@@ -11,6 +11,7 @@
 namespace Chunhei2008\Hyperf\Translation;
 
 
+use Chunhei2008\Hyperf\Translation\Contracts\Loader;
 use Hyperf\Contract\ConfigInterface;
 use Psr\Container\ContainerInterface;
 
@@ -26,12 +27,9 @@ class TranslatorFactory
         $locale         = $config->get('translation.locale');
         $fallbackLocale = $config->get('translation.fallback_locale');
 
-        $loader = $container->get(FileLoader::class);
+        $loader = $container->get(Loader::class);
 
-        $trans = make(Translator::class, [
-            'loader' => $loader,
-            'locale' => $locale,
-        ]);
+        $trans = make(Translator::class, compact('loader', 'locale'));
         $trans->setFallback($fallbackLocale);
 
 

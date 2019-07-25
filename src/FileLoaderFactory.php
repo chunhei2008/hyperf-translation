@@ -24,10 +24,7 @@ class FileLoaderFactory
         $files  = $container->get(Filesystem::class);
         $path   = $config->get('translation.lang');
 
-        return make(FileLoader::class, [
-            'files' => $files,
-            'path'  => $path,
-        ]);
+        return make(FileLoader::class, compact('files', 'path'));
 
     }
 }

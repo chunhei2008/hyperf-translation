@@ -12,13 +12,16 @@ declare(strict_types=1);
 
 namespace Chunhei2008\Hyperf\Translation;
 
+use Chunhei2008\Hyperf\Translation\Contracts\Loader;
+use Chunhei2008\Hyperf\Translation\Contracts\Translator;
+
 class ConfigProvider
 {
     public function __invoke(): array
     {
         return [
             'dependencies' => [
-                FileLoader::class => FileLoaderFactory::class,
+                Loader::class     => FileLoaderFactory::class,
                 Translator::class => TranslatorFactory::class,
             ],
             'scan'         => [
