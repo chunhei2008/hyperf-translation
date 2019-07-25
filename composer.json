@@ -13,5 +13,9 @@
             "Chunhei2008\\Hyperf\\Translation\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+        "psr/container": "^1.0",
+        "hyperf/utils": "~1.0.0",
+        "hyperf/contract": "~1.0.0"
+    }
 }
