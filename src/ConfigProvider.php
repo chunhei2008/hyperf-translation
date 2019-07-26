@@ -29,14 +29,14 @@ class ConfigProvider
                     __DIR__,
                 ],
             ],
-            //            'publish' => [
-            //                [
-            //                    'id' => 'config',
-            //                    'description' => 'The config for aliyun acm.',
-            //                    'source' => __DIR__ . '/../publish/aliyun_acm.php',
-            //                    'destination' => BASE_PATH . '/config/autoload/aliyun_acm.php',
-            //                ],
-            //            ],
+            'publish'      => [
+                [
+                    'id'          => 'config',
+                    'description' => 'The config for translation.',
+                    'source'      => __DIR__ . '/../publish/translation.php',
+                    'destination' => BASE_PATH . '/config/autoload/translation.php',
+                ],
+            ],
         ];
     }
 }
