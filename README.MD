@@ -1,5 +1,8 @@
 # Hyperf Translation
 
+## About
+
+chunhei2008/hyperf-translation 是对Laravel Translation的移植（不包含门面和快捷函数部分），具体使用方法可以参考Laravel Lang的使用。
 
 ## Install
 
