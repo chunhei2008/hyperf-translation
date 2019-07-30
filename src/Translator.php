@@ -54,7 +54,7 @@ class Translator extends NamespacedItemResolver implements TranslatorContract
      * Create a new translator instance.
      *
      * @param  \Chunhei2008\Hyperf\Translation\Contracts\Loader $loader
-     * @param  string                                       $locale
+     * @param  string                                           $locale
      * @return void
      */
     public function __construct(Loader $loader, $locale)
@@ -234,8 +234,12 @@ class Translator extends NamespacedItemResolver implements TranslatorContract
     protected function getLine($namespace, $group, $locale, $item, array $replace)
     {
         $this->load($namespace, $group, $locale);
-
-        $line = Arr::get($this->loaded[$namespace][$group][$locale], $item);
+        if (!is_null($item)) {
+            $line = Arr::get($this->loaded[$namespace][$group][$locale], $item);
+        } else {
+            // do for hyperf Arr::get
+            $line = $this->loaded[$namespace][$group][$locale];
+        }
 
         if (is_string($line)) {
             return $this->makeReplacements($line, $replace);

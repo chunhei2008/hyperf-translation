@@ -10,7 +10,7 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf-cloud/hyperf/blob/master/LICENSE
  */
 
-namespace HyperfTest\Cases;
+namespace Chunhei2008\Hyperf\Translation\Tests\Cases;
 
 use PHPUnit\Framework\TestCase;
 
@@ -18,5 +18,8 @@ use PHPUnit\Framework\TestCase;
  * Class AbstractTestCase.
  */
 abstract class AbstractTestCase extends TestCase
+
+
+
 {
 }
