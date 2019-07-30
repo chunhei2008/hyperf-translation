@@ -42,7 +42,7 @@
         "sort-packages": true
     },
     "scripts": {
-        "test": "co-phpunit -c phpunit.xml --colors=always --dev",
+        "test": "co-phpunit -c phpunit.xml --colors=always",
         "analyze": "phpstan analyse --memory-limit 300M -l 0 ./src",
         "cs-fix": "php-cs-fixer fix $1"
     },
