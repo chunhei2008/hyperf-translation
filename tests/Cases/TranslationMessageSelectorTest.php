@@ -1,6 +1,6 @@
 <?php
 
-namespace Chunhei2008\Hyperf\Translation\Tests\Cases;
+namespace Chunhei2008\HyperfTest\Translation\Cases;
 
 use Chunhei2008\Hyperf\Translation\MessageSelector;
 

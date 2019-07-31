@@ -20,7 +20,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Chunhei2008\\Hyperf\\Translation\\Tests\\": "tests"
+            "Chunhei2008\\HyperfTest\\Translation\\": "tests"
         }
     },
     "require": {
